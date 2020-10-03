@@ -25,7 +25,7 @@ class _ColorPicker:
         return Color(r, g, b)
 
 
-def parse_script(script: Union[List[str], str], is_lua: bool, static_color:Optional[Color] = None) -> List[Region]:
+def parse_script(script: Union[List[str], str], is_lua: bool, static_color: Optional[Color] = None) -> List[Region]:
     """
 
     parses a list of code or code lines of the CreateRegions function in either Jass or Lua

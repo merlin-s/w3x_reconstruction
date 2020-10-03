@@ -7,7 +7,7 @@ from shared import Color
 
 class Test(TestCase):
     @staticmethod
-    def _hex(data:bytes):
+    def _hex(data: bytes):
         block_size = 8
         separator = " "
         result = []
@@ -27,7 +27,7 @@ class Test(TestCase):
     def _from_hex(hex_str: str):
         return bytes.fromhex(hex_str.replace(" ", "").replace("\n", ""))
 
-    def _test(self, test_data:str, expected_hex:str, is_lua=True):
+    def _test(self, test_data: str, expected_hex: str, is_lua=True):
         parsed = parse_script(test_data.split("\n"), is_lua=is_lua, static_color=Color(128, 128, 255))
         w3r = serialize_as_blob(parsed)
         actual = w3r.data

@@ -46,4 +46,3 @@ class Blob:
         with open(file_path, "wb") as f:
             f.write(self.data)
         print("wrote: " + file_path)
-

@@ -23,6 +23,12 @@ class Blob:
         self.append_byte(g)
         self.append_byte(r)
 
+    def append_char4(self, value: str):
+        value = value.encode('utf-8')
+        assert len(value) == 4
+        for b in value:
+            self.append_byte(b)
+
     def __repr__(self):
         return repr(self._data)
 
